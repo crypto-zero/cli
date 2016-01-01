@@ -145,6 +145,7 @@ func (a *App) Run(arguments []string) (err error) {
 
 	if !a.HideVersion && checkVersion(context) {
 		ShowVersion(context)
+		os.Exit(0)
 		return nil
 	}
 
