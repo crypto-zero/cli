@@ -889,7 +889,7 @@ func TestApp_Run_Help(t *testing.T) {
 }
 
 func TestApp_Run_Version(t *testing.T) {
-	var versionArguments = [][]string{{"boom", "--version"}, {"boom", "-v"}}
+	var versionArguments = [][]string{{"boom", "--version"}}
 
 	for _, args := range versionArguments {
 		buf := new(bytes.Buffer)
