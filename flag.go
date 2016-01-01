@@ -16,7 +16,7 @@ var BashCompletionFlag = BoolFlag{
 
 // This flag prints the version for the application
 var VersionFlag = BoolFlag{
-	Name:  "version, v",
+	Name:  "version",
 	Usage: "print the version",
 }
 
