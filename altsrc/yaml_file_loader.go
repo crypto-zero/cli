@@ -12,7 +12,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/micro/cli/cli"
+	"github.com/micro/cli"
 
 	"gopkg.in/yaml.v2"
 )

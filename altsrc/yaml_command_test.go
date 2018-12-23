@@ -11,7 +11,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/micro/cli/cli"
+	"github.com/micro/cli"
 )
 
 func TestCommandYamlFileTest(t *testing.T) {

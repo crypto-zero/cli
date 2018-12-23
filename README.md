@@ -14,7 +14,7 @@ Make sure you have a working Go environment (go 1.1+ is *required*). [See the in
 
 To install `cli.go`, simply run:
 ```
-$ go get github.com/micro/cli/cli
+$ go get github.com/micro/cli
 ```
 
 Make sure your `PATH` includes to the `$GOPATH/bin` directory so your commands can be easily used:
@@ -31,7 +31,7 @@ package main
 
 import (
   "os"
-  "github.com/micro/cli/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -46,7 +46,7 @@ package main
 
 import (
   "os"
-  "github.com/micro/cli/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -74,7 +74,7 @@ package main
 
 import (
   "os"
-  "github.com/micro/cli/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -188,7 +188,7 @@ app.Action = func(c *cli.Context) {
 ...
 ```
 
-See full list of flags at http://godoc.org/github.com/micro/cli/cli
+See full list of flags at http://godoc.org/github.com/micro/cli
 
 #### Alternate Names
 
