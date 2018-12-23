@@ -1,6 +1,6 @@
-# Go CLI
+# CLI
 
-Go CLI is a fork of `codegangsta/cli`. We use it to simplify flag parsing.
+CLI is a fork of `codegangsta/cli`. We use it to simplify flag parsing.
 
 ## Overview
 
