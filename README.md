@@ -1,4 +1,4 @@
-# CLI
+# CLI [![GoDoc](https://godoc.org/github.com/micro/cli?status.svg)](https://godoc.org/github.com/micro/cli)
 
 CLI is a fork of `codegangsta/cli`. We use it to simplify flag parsing.
 
