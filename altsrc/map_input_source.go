@@ -5,7 +5,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/codegangsta/cli"
+	"github.com/micro/cli/cli"
 )
 
 // MapInputSource implements InputSourceContext to return

@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/codegangsta/cli"
+	"github.com/micro/cli/cli"
 )
 
 type testApplyInputSource struct {
