@@ -1,26 +1,6 @@
-<<<<<<< HEAD
 # CLI [![GoDoc](https://godoc.org/github.com/micro/cli?status.svg)](https://godoc.org/github.com/micro/cli)
 
-CLI is a fork of `codegangsta/cli`. We use it to simplify flag parsing.
-=======
-cli
-===
-
-[![Build Status](https://travis-ci.org/urfave/cli.svg?branch=master)](https://travis-ci.org/urfave/cli)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/rtgk5xufi932pb2v?svg=true)](https://ci.appveyor.com/project/urfave/cli)
-[![GoDoc](https://godoc.org/github.com/urfave/cli?status.svg)](https://godoc.org/github.com/urfave/cli)
-[![codebeat](https://codebeat.co/badges/0a8f30aa-f975-404b-b878-5fab3ae1cc5f)](https://codebeat.co/projects/github-com-urfave-cli)
-[![Go Report Card](https://goreportcard.com/badge/urfave/cli)](https://goreportcard.com/report/urfave/cli)
-[![top level coverage](https://gocover.io/_badge/github.com/urfave/cli?0 "top level coverage")](http://gocover.io/github.com/urfave/cli) /
-[![altsrc coverage](https://gocover.io/_badge/github.com/urfave/cli/altsrc?0 "altsrc coverage")](http://gocover.io/github.com/urfave/cli/altsrc)
-
-**Notice:** This is the library formerly known as
-`github.com/codegangsta/cli` -- Github will automatically redirect requests
-to this repository, but we recommend updating your references for clarity.
-
-cli is a simple, fast, and fun package for building command line apps in Go. The
-goal is to enable developers to write fast and distributable command line
-applications in an expressive way.
+CLI is a fork of `urfave/cli`. We use it to simplify flag parsing.
 
 <!-- toc -->
 
@@ -53,7 +33,6 @@ applications in an expressive way.
 - [Contribution Guidelines](#contribution-guidelines)
 
 <!-- tocstop -->
->>>>>>> v1.20.0
 
 ## Overview
 
@@ -72,11 +51,7 @@ the install instructions for Go](http://golang.org/doc/install.html).
 
 To install cli, simply run:
 ```
-<<<<<<< HEAD
 $ go get github.com/micro/cli
-=======
-$ go get github.com/urfave/cli
->>>>>>> v1.20.0
 ```
 
 Make sure your `PATH` includes the `$GOPATH/bin` directory so your commands can
@@ -149,12 +124,7 @@ package main
 
 import (
   "os"
-<<<<<<< HEAD
   "github.com/micro/cli"
-=======
-
-  "github.com/urfave/cli"
->>>>>>> v1.20.0
 )
 
 func main() {
@@ -174,12 +144,8 @@ package main
 import (
   "fmt"
   "os"
-<<<<<<< HEAD
-  "github.com/micro/cli"
-=======
 
-  "github.com/urfave/cli"
->>>>>>> v1.20.0
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -216,12 +182,8 @@ package main
 import (
   "fmt"
   "os"
-<<<<<<< HEAD
-  "github.com/micro/cli"
-=======
 
-  "github.com/urfave/cli"
->>>>>>> v1.20.0
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -391,10 +353,7 @@ func main() {
 }
 ```
 
-<<<<<<< HEAD
 See full list of flags at http://godoc.org/github.com/micro/cli
-=======
-See full list of flags at http://godoc.org/github.com/urfave/cli
 
 #### Placeholder Values
 
@@ -413,7 +372,7 @@ package main
 import (
   "os"
 
-  "github.com/urfave/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -438,7 +397,6 @@ Will result in help output like:
 
 Note that only the first placeholder is used. Subsequent back-quoted words will
 be left as-is.
->>>>>>> v1.20.0
 
 #### Alternate Names
 
@@ -1398,11 +1356,6 @@ compatibility. If I or any other collaborators agree that it is in line with
 the vision of the project, we will work with you to get the code into
 a mergeable state and merge it into the master branch.
 
-<<<<<<< HEAD
-If you have contributed something significant to the project, I will most likely add you as a collaborator. As a collaborator you are given the ability to merge others pull requests. It is very important that new code does not break existing code, so be careful about what code you do choose to merge. If you have any questions feel free to link @micro/cli to the issue in question and we can review it together.
-
-If you feel like you have contributed to the project but have not yet been added as a collaborator, I probably forgot to add you. Hit @micro/cli up over email and we will get it figured out.
-=======
 If you have contributed something significant to the project, we will most
 likely add you as a collaborator. As a collaborator you are given the ability
 to merge others pull requests. It is very important that new code does not
@@ -1410,4 +1363,3 @@ break existing code, so be careful about what code you do choose to merge.
 
 If you feel like you have contributed to the project but have not yet been
 added as a collaborator, we probably forgot to add you, please open an issue.
->>>>>>> v1.20.0
