@@ -2,9 +2,149 @@
 
 **ATTN**: This project uses [semantic versioning](http://semver.org/).
 
-## [Unreleased]
+## Unreleased - 2.X series
 
-## 1.20.0 - 2017-08-10
+View [unreleased 2.X] series changes.
+
+## [2.1.1] - 2019-12-24
+
+### Fixed
+
+* Fixed a `Context` regression introduced in `v2.1.0` in [urfave/cli/pull/1014](https://github.com/urfave/cli/pull/1014) via [@lynncyrin](https://github.com/lynncyrin)
+
+## [2.1.0] - 2019-12-24
+
+These release notes were written for the git hash [ae84df4cef4a2a6f1a0cb1d41ea0f3af8755e5a8](https://github.com/urfave/cli/tree/ae84df4cef4a2a6f1a0cb1d41ea0f3af8755e5a8)
+
+### Fixed
+
+* Fixed some golint errors in [urfave/cli/pull/988](https://github.com/urfave/cli/pull/988) via [@liamchampton](https://github.com/liamchampton)
+* Fixed a panic with flag completion [urfave/cli/pull/946](https://github.com/urfave/cli/pull/946) via [@unRob](https://github.com/unRob)
+
+### Changed
+
+* Changed docs generation to use visible flags in [urfave/cli/pull/999](https://github.com/urfave/cli/pull/999) via [@subpop](https://github.com/subpop)
+* Changed `App.Run` to use an optional context for timeouts and cancellation in [urfave/cli/pull/975](https://github.com/urfave/cli/pull/975) via [@marwan-at-work](https://github.com/marwan-at-work)
+* Changed version info to be hidden if the user has not defined a version in [urfave/cli/pull/955](https://github.com/urfave/cli/pull/955) via [@asahasrabuddhe](https://github.com/asahasrabuddhe)
+* Changed docs generation to take into account multiple authors in [urfave/cli/pull/900](https://github.com/urfave/cli/pull/900) via [@saschagrunert](https://github.com/saschagrunert)
+* Changed context to expose a `Value` accessor in [urfave/cli/pull/741](https://github.com/urfave/cli/pull/741) via [@corruptmemory](https://github.com/corruptmemory)
+
+### Added
+
+* Added timestamp flag in [urfave/cli/pull/987](https://github.com/urfave/cli/pull/987) via [@drov0](https://github.com/drov0)
+
+## [2.0.0] - 2019-11-17
+
+The V2 changes were all shipped in [urfave/cli/pull/892](https://github.com/urfave/cli/pull/892), which was created with the effort of over a dozen participants! They are:
+
+[@asahasrabuddhe](https://github.com/asahasrabuddhe), [@meatballhat](https://github.com/meatballhat), [@jszwedko](https://github.com/jszwedko), [@lynncyrin](https://github.com/lynncyrin), [@AudriusButkevicius](https://github.com/AudriusButkevicius), [@saschagrunert](https://github.com/saschagrunert), [@rliebz](https://github.com/rliebz), [@johnweldon](https://github.com/johnweldon), [@nlewo](https://github.com/nlewo), [@grubernaut](https://github.com/grubernaut), [@OneOfOne](https://github.com/OneOfOne), [@VMitov](https://github.com/VMitov), [@cbranch](https://github.com/cbranch), [@marwan-at-work](https://github.com/marwan-at-work), [@uudashr](https://github.com/uudashr), [@bfreis](https://github.com/bfreis)
+
+### Added
+
+- Added `NewStringSlice` and `NewIntSlice` for creating their related types
+- Added `Float64SliceFlag` for unmarshaling a list of floats from the user
+- Added `Context.Lineage` to get all contexts from current up to global
+- Added `Context.LocalFlagNames` to get the flag names from *only* the current context
+- Added `BoolFlag.Value` to handle both default-false and default-true
+- Added `IsSet` method to the `Flag` interface which allows us to detect whether or not a flag has been set
+
+### Changed
+
+- `Context.FlagNames` now returns all flags in the context lineage
+- `Context.IsSet` now considers the full context lineage
+
+### Removed
+
+- Removed the ability to specify `&StringSlice{...string}` or `&IntSlice{...int}`.
+- Removed adapter code for deprecated `Action` func signature
+- Deprecated `App.Author`, `App.Email`, and `Command.ShortName` fields
+- Removed all `Context.Global*` methods, as the non-global versions now traverse up
+  the context lineage automatically.
+- Removed `Context.Parent` method, as this is now available via `Context.Lineage`
+- Removed `BoolTFlag` and related code, as this is now available via `BoolFlag.Value`
+
+## Unreleased - 1.22.X series
+
+View [unreleased 1.22.X] series changes.
+
+## [1.22.2] - 2019-11-17
+
+### Fixed
+
+- Fix v1.21.0 pass through regression in [urfave/cli/pull/872](https://github.com/urfave/cli/pull/872) via [@lynncyrin](https://github.com/lynncyrin)
+- Fix infinite loop when parsing invalid flags for apps with short option handling in [urfave/cli/pull/911](https://github.com/urfave/cli/pull/911) via [@rliebz](https://github.com/rliebz)
+- Fix zsh autocomplete in [urfave/cli/pull/906](https://github.com/urfave/cli/pull/906) via [@gnowxilef](https://github.com/gnowxilef)
+- Fix typo in `DocGenerationFlag.TakesValue()` docstring in [urfave/cli/pull/902](https://github.com/urfave/cli/pull/902) via [@benmoose](https://github.com/benmoose)
+- Avoid panic for missing flag value in [urfave/cli/pull/893](https://github.com/urfave/cli/pull/893) via [@rliebz](https://github.com/rliebz)
+
+### Changed
+
+- Simplify `HelpPrinter` and `CustomHelpPrinter` behaviors in [urfave/cli/pull/912](https://github.com/urfave/cli/pull/912) via [@rliebz](https://github.com/rliebz)
+
+## [1.22.1] - 2019-09-11
+
+### Fixed
+
+* Hide output of hidden commands on man pages in [urfave/cli/pull/889](https://github.com/urfave/cli/pull/889) via [@crosbymichael](https://github.com/crosbymichael)
+* Don't generate fish completion for hidden commands [urfave/cli/pull/891](https://github.com/urfave/891) via [@saschagrunert](https://github.com/saschagrunert)
+* Using short flag names for required flags throws an error in [urfave/cli/pull/890](https://github.com/urfave/cli/pull/890) via [@asahasrabuddhe](https://github.com/asahasrabuddhe)
+
+### Changed
+
+* Remove flag code generation logic, legacy python test runner in [urfave/cli/pull/883](https://github.com/urfave/cli/pull/883) via [@asahasrabuddhe](https://github.com/asahasrabuddhe)
+* Enable Go Modules support, drop support for `Go 1.10` add support for `Go 1.13` in [urfave/cli/pull/885](https://github.com/urfave/cli/pull/885) via [@asahasrabuddhe](https://github.com/asahasrabuddhe)
+
+## [1.22.0] - 2019-09-07
+
+### Fixed
+
+* Fix Subcommands not falling back to `app.ExitEventHandler` in [urfave/cli/pull/856](https://github.com/urfave/cli/pull/856) via [@FaranIdo](https://github.com/FaranIdo)
+
+### Changed
+
+* Clarify that altsrc supports both TOML and JSON in [urfave/cli/pull/774](https://github.com/urfave/cli/pull/774) via [@whereswaldon](https://github.com/whereswaldon)
+* Made the exit code example more clear in [urfave/cli/pull/823](https://github.com/urfave/cli/pull/823) via [@xordspar0](https://github.com/xordspar0)
+* Removed the use of python for internal flag generation in [urfave/cli/pull/836](https://github.com/urfave/cli/pull/836) via [@asahasrabuddhe](https://github.com/asahasrabuddhe)
+* Changed the supported go versions to `1.10`, `1.11`, `1.12` in [urfave/cli/pull/843](https://github.com/urfave/cli/pull/843) via [@lafriks](https://github.com/lafriks)
+* Changed the v1 releases section in the readme in [urfave/cli/pull/862](https://github.com/urfave/cli/pull/862) via [@russoj88](https://github.com/russoj88)
+* Cleaned up go modules in [urfave/cli/pull/874](https://github.com/urfave/cli/pull/874) via [@saschagrunert](https://github.com/saschagrunert)
+
+### Added
+
+* Added `UseShortOptionHandling` for combining short flags in [urfave/cli/pull/735](https://github.com/urfave/cli/pull/735) via [@rliebz](https://github.com/rliebz)
+* Added support for flags bash completion in [urfave/cli/pull/808](https://github.com/urfave/cli/pull/808) via [@yogeshlonkar](https://github.com/yogeshlonkar)
+* Added the `TakesFile` indicator to flag in [urfave/cli/pull/851](https://github.com/urfave/cli/pull/851) via [@saschagrunert](https://github.com/saschagrunert)
+* Added fish shell completion support in [urfave/cli/pull/848](https://github.com/urfave/cli/pull/848) via [@saschagrunert](https://github.com/saschagrunert)
+
+## [1.21.0] - 2019-08-02
+
+### Fixed
+
+* Fix using "slice" flag types with `EnvVar` in [urfave/cli/pull/687](https://github.com/urfave/cli/pull/687) via [@joshuarubin](https://github.com/joshuarubin)
+* Fix regression of `SkipFlagParsing` behavior in [urfave/cli/pull/697](https://github.com/urfave/cli/pull/697) via [@jszwedko](https://github.com/jszwedko)
+* Fix handling `ShortOptions` and `SkipArgReorder` in [urfave/cli/pull/686](https://github.com/urfave/cli/pull/686) via [@baude](https://github.com/baude)
+* Fix args reordering when bool flags are present in [urfave/cli/pull/712](https://github.com/urfave/cli/pull/712) via [@windler](https://github.com/windler)
+* Fix parsing of short options in [urfave/cli/pull/758](https://github.com/urfave/cli/pull/758) via [@vrothberg](https://github.com/vrothberg)
+* Fix unaligned indents for the command help messages in [urfave/cli/pull/806](https://github.com/urfave/cli/pull/806) via [@mingrammer](https://github.com/mingrammer)
+
+### Changed
+
+* Cleaned up help output in [urfave/cli/pull/664](https://github.com/urfave/cli/pull/664) via [@maguro](https://github.com/maguro)
+* Remove redundant nil checks in [urfave/cli/pull/773](https://github.com/urfave/cli/pull/773) via [@teresy](https://github.com/teresy)
+* Case is now considered when sorting strings in [urfave/cli/pull/676](https://github.com/urfave/cli/pull/676) via [@rliebz](https://github.com/rliebz)
+
+### Added
+
+* Added _"required flags"_ support in [urfave/cli/pull/819](https://github.com/urfave/cli/pull/819) via [@lynncyrin](https://github.com/lynncyrin/)
+* Backport JSON `InputSource` to v1 in [urfave/cli/pull/598](https://github.com/urfave/cli/pull/598) via [@jszwedko](https://github.com/jszwedko)
+* Allow more customization of flag help strings in [urfave/cli/pull/661](https://github.com/urfave/cli/pull/661) via [@rliebz](https://github.com/rliebz)
+* Allow custom `ExitError` handler function in [urfave/cli/pull/628](https://github.com/urfave/cli/pull/628) via [@phinnaeus](https://github.com/phinnaeus)
+* Allow loading a variable from a file in [urfave/cli/pull/675](https://github.com/urfave/cli/pull/675) via [@jmccann](https://github.com/jmccann)
+* Allow combining short bool names in [urfave/cli/pull/684](https://github.com/urfave/cli/pull/684) via [@baude](https://github.com/baude)
+* Added test coverage to context in [urfave/cli/pull/788](https://github.com/urfave/cli/pull/788) via [@benzvan](https://github.com/benzvan)
+* Added go module support in [urfave/cli/pull/831](https://github.com/urfave/cli/pull/831) via [@saschagrunert](https://github.com/saschagrunert)
+
+## [1.20.0] - 2017-08-10
 
 ### Fixed
 
@@ -407,7 +547,19 @@ signature of `func(*cli.Context) error`, as defined by `cli.ActionFunc`.
 ### Added
 - Initial implementation.
 
-[Unreleased]: https://github.com/urfave/cli/compare/v1.18.0...HEAD
+[unreleased 2.X]: https://github.com/urfave/cli/compare/v2.1.1...HEAD
+[2.1.1]: https://github.com/urfave/cli/compare/v2.1.0...v2.1.1
+[2.1.0]: https://github.com/urfave/cli/compare/v2.0.0...v2.1.0
+[2.0.0]: https://github.com/urfave/cli/compare/v1.22.2...v2.0.0
+
+[unreleased 1.22.X]: https://github.com/urfave/cli/compare/v1.22.2...v1
+[1.22.2]: https://github.com/urfave/cli/compare/v1.22.1...v1.22.2
+[1.22.1]: https://github.com/urfave/cli/compare/v1.22.0...v1.22.1
+[1.22.0]: https://github.com/urfave/cli/compare/v1.21.0...v1.22.0
+[1.21.0]: https://github.com/urfave/cli/compare/v1.20.0...v1.21.0
+[1.20.0]: https://github.com/urfave/cli/compare/v1.19.1...v1.20.0
+[1.19.1]: https://github.com/urfave/cli/compare/v1.19.0...v1.19.1
+[1.19.0]: https://github.com/urfave/cli/compare/v1.18.0...v1.19.0
 [1.18.0]: https://github.com/urfave/cli/compare/v1.17.0...v1.18.0
 [1.17.0]: https://github.com/urfave/cli/compare/v1.16.0...v1.17.0
 [1.16.0]: https://github.com/urfave/cli/compare/v1.15.0...v1.16.0
