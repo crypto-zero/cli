@@ -2,7 +2,7 @@
 
 CLI is a fork of `urfave/cli`. We use it to simplify flag parsing.
 
-[![GoDoc](https://godoc.org/github.com/urfave/cli?status.svg)](https://godoc.org/github.com/urfave/cli)
+[![GoDoc](https://godoc.org/github.com/micro/cli?status.svg)](https://godoc.org/github.com/micro/cli)
 [![codebeat](https://codebeat.co/badges/0a8f30aa-f975-404b-b878-5fab3ae1cc5f)](https://codebeat.co/projects/github-com-urfave-cli)
 [![Go Report Card](https://goreportcard.com/badge/urfave/cli)](https://goreportcard.com/report/urfave/cli)
 [![codecov](https://codecov.io/gh/urfave/cli/branch/master/graph/badge.svg)](https://codecov.io/gh/urfave/cli)
@@ -48,13 +48,13 @@ Go Modules are strongly recommended when using this package. [See the go blog gu
 ### Using `v2` releases
 
 ```
-$ GO111MODULE=on go get github.com/urfave/cli/v2
+$ GO111MODULE=on go get github.com/micro/cli/v2
 ```
 
 ```go
 ...
 import (
-  "github.com/urfave/cli/v2" // imports as package "cli"
+  "github.com/micro/cli/v2" // imports as package "cli"
 )
 ...
 ```
@@ -197,7 +197,7 @@ import (
   "fmt"
   "os"
 
-  "github.com/urfave/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -226,7 +226,7 @@ import (
   "fmt"
   "os"
 
-  "github.com/urfave/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -270,7 +270,7 @@ import (
   "os"
   "fmt"
 
-  "github.com/urfave/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -364,7 +364,7 @@ package main
 import (
   "os"
 
-  "github.com/urfave/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -405,7 +405,7 @@ import (
   "os"
   "sort"
 
-  "github.com/urfave/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -470,7 +470,7 @@ package main
 import (
   "os"
 
-  "github.com/urfave/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -502,7 +502,7 @@ package main
 import (
   "os"
 
-  "github.com/urfave/cli"
+  "github.com/micro/cli"
 )
 
 func main() {
@@ -526,13 +526,13 @@ func main() {
 ### Using `v1` releases
 
 ```
-$ GO111MODULE=on go get github.com/urfave/cli
+$ GO111MODULE=on go get github.com/micro/cli
 ```
 
 ```go
 ...
 import (
-  "github.com/urfave/cli"
+  "github.com/micro/cli"
 )
 ...
 ```
@@ -549,4 +549,4 @@ export PATH=$PATH:$GOPATH/bin
 
 cli is tested against multiple versions of Go on Linux, and against the latest
 released version of Go on OS X and Windows. This project uses Github Actions for
-builds. For more build info, please look at the [./.github/workflows/cli.yml](https://github.com/urfave/cli/blob/master/.github/workflows/cli.yml).
+builds. For more build info, please look at the [./.github/workflows/cli.yml](https://github.com/micro/cli/blob/master/.github/workflows/cli.yml).
