@@ -18,10 +18,13 @@ var helpCommand = &Command{
 	Action: func(c *Context) error {
 		args := c.Args()
 		if args.Present() {
-			return ShowCommandHelp(c, args.First())
+			_ = ShowCommandHelp(c, args.First())
+			os.Exit(0)
+			return nil
 		}
 
 		_ = ShowAppHelp(c)
+		os.Exit(0)
 		return nil
 	},
 }
@@ -34,10 +37,14 @@ var helpSubcommand = &Command{
 	Action: func(c *Context) error {
 		args := c.Args()
 		if args.Present() {
-			return ShowCommandHelp(c, args.First())
+			_ = ShowCommandHelp(c, args.First())
+			os.Exit(0)
+			return nil
 		}
 
-		return ShowSubcommandHelp(c)
+		_ = ShowSubcommandHelp(c)
+		os.Exit(0)
+		return nil
 	},
 }
 
