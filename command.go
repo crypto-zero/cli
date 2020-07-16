@@ -21,9 +21,9 @@ type Command struct {
 	Description string
 	// A short description of the arguments of this command
 	ArgsUsage string
-	// AcceptsArgs is a boolean value indicating if the command expects arguments,
+	// NoArgs is a boolean value indicating if the command does not expect arguments,
 	// if arguments are present the command won't be called.
-	AcceptsArgs bool
+	NoArgs bool
 	// The category the command is part of
 	Category string
 	// The function to call when checking for bash command completions
@@ -236,7 +236,7 @@ func (c *Command) Match(args []string) *Command {
 	}
 
 	// check for any subcommands
-	if !c.AcceptsArgs && len(args) > 1 {
+	if c.NoArgs && len(args) > 1 {
 		return nil
 	}
 
