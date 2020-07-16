@@ -227,6 +227,7 @@ func (c *Command) Match(args []string) *Command {
 	if !c.HasName(args[0]) {
 		return nil
 	}
+	fmt.Println("HERE", args, c.Name)
 
 	// check for subcommands before matching the current commands
 	for _, c := range c.Subcommands {
