@@ -21,9 +21,6 @@ type Command struct {
 	Description string
 	// A short description of the arguments of this command
 	ArgsUsage string
-	// AcceptsArgs is a boolean value indicating if the command expects arguments,
-	// if arguments are present the command won't be called.
-	AcceptsArgs bool
 	// The category the command is part of
 	Category string
 	// The function to call when checking for bash command completions
@@ -213,35 +210,6 @@ func (c *Command) HasName(name string) bool {
 		}
 	}
 	return false
-}
-
-// Match returns the current command or a subcommand which matches
-// based on the arguments provided
-func (c *Command) Match(args []string) *Command {
-	// if there are no args we can't match the command
-	if len(args) == 0 {
-		return nil
-	}
-	// if the name doesn't match then don't execute this command or
-	// any subcommands
-	if !c.HasName(args[0]) {
-		return nil
-	}
-
-	// check for subcommands before matching the current commands
-	for _, c := range c.Subcommands {
-		if r := c.Match(args[1:]); r != nil {
-			return r
-		}
-	}
-
-	// check for any subcommands
-	if !c.AcceptsArgs && len(args) > 1 {
-		return nil
-	}
-
-	// call c with the args
-	return c
 }
 
 func (c *Command) startApp(ctx *Context) error {
