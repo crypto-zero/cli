@@ -297,7 +297,9 @@ func (a *App) RunContext(ctx context.Context, arguments []string) (err error) {
 
 	args := context.Args()
 	if args.Present() {
-		if c := a.Command(args.Slice()...); c != nil {
+		name := args.First()
+		c := a.Command(name)
+		if c != nil {
 			return c.Run(context)
 		}
 	}
@@ -426,7 +428,8 @@ func (a *App) RunAsSubcommand(ctx *Context) (err error) {
 
 	args := context.Args()
 	if args.Present() {
-		c := a.Command(args.Slice()...)
+		name := args.First()
+		c := a.Command(name)
 		if c != nil {
 			return c.Run(context)
 		}
@@ -439,14 +442,14 @@ func (a *App) RunAsSubcommand(ctx *Context) (err error) {
 	return err
 }
 
-// Command returns the named command on App. Returns nil if the command does not exist.
-// Use a slice to preserve backwards compatability.
-func (a *App) Command(args ...string) *Command {
+// Command returns the named command on App. Returns nil if the command does not exist
+func (a *App) Command(name string) *Command {
 	for _, c := range a.Commands {
-		if cmd := c.Match(args); cmd != nil {
-			return cmd
+		if c.HasName(name) {
+			return c
 		}
 	}
+
 	return nil
 }
 
