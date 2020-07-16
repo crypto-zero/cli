@@ -21,9 +21,9 @@ type Command struct {
 	Description string
 	// A short description of the arguments of this command
 	ArgsUsage string
-	// NoArgs is a boolean value indicating if the command does not expect arguments,
+	// AcceptsArgs is a boolean value indicating if the command expects arguments,
 	// if arguments are present the command won't be called.
-	NoArgs bool
+	AcceptsArgs bool
 	// The category the command is part of
 	Category string
 	// The function to call when checking for bash command completions
@@ -227,7 +227,6 @@ func (c *Command) Match(args []string) *Command {
 	if !c.HasName(args[0]) {
 		return nil
 	}
-	fmt.Println("HERE", args, c.Name)
 
 	// check for subcommands before matching the current commands
 	for _, c := range c.Subcommands {
@@ -237,7 +236,7 @@ func (c *Command) Match(args []string) *Command {
 	}
 
 	// check for any subcommands
-	if c.NoArgs && len(args) > 1 {
+	if !c.AcceptsArgs && len(args) > 1 {
 		return nil
 	}
 
