@@ -3,7 +3,7 @@ package altsrc
 import (
 	"time"
 
-	"github.com/micro/cli/v2"
+	"lemco.dev/micro/cli/v2"
 )
 
 // InputSourceContext is an interface used to allow

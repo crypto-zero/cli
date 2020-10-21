@@ -9,7 +9,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/micro/cli/v2"
+	"lemco.dev/micro/cli/v2"
 
 	"gopkg.in/yaml.v2"
 )

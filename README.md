@@ -48,13 +48,13 @@ Go Modules are strongly recommended when using this package. [See the go blog gu
 ### Using `v2` releases
 
 ```
-$ GO111MODULE=on go get github.com/micro/cli/v2
+$ GO111MODULE=on go get lemco.dev/micro/cli/v2
 ```
 
 ```go
 ...
 import (
-  "github.com/micro/cli/v2" // imports as package "cli"
+  "lemco.dev/micro/cli/v2" // imports as package "cli"
 )
 ...
 ```

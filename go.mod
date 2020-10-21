@@ -1,4 +1,4 @@
-module github.com/micro/cli/v2
+module lemco.dev/micro/cli/v2
 
 go 1.11
 

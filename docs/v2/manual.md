@@ -47,7 +47,7 @@ package main
 import (
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -69,7 +69,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -112,7 +112,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -177,7 +177,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -210,7 +210,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -257,7 +257,7 @@ import (
   "os"
   "fmt"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -313,7 +313,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -359,7 +359,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -405,7 +405,7 @@ import (
   "os"
   "sort"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -473,7 +473,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -510,7 +510,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -548,7 +548,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -619,8 +619,8 @@ import (
   "fmt"
   "os"
 
-  "github.com/micro/cli/v2"
-  "github.com/micro/cli/v2/altsrc"
+  "lemco.dev/micro/cli/v2"
+  "lemco.dev/micro/cli/v2/altsrc"
 )
 
 func main() {
@@ -716,7 +716,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -769,7 +769,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -841,7 +841,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -895,7 +895,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -946,7 +946,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -1010,7 +1010,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -1087,7 +1087,7 @@ import (
   "log"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -1131,7 +1131,7 @@ import (
   "io"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -1188,7 +1188,7 @@ package main
 import (
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -1223,7 +1223,7 @@ package main
 import (
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func main() {
@@ -1253,7 +1253,7 @@ import (
   "fmt"
   "os"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 var (
@@ -1293,7 +1293,7 @@ import (
   "os"
   "time"
 
-  "github.com/micro/cli/v2"
+  "lemco.dev/micro/cli/v2"
 )
 
 func init() {
