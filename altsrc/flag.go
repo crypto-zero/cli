@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"syscall"
 
-	"github.com/micro/cli/v2"
+	"github.com/crypto-zero/cli"
 )
 
 // FlagInputSourceExtension is an extension interface of cli.Flag that

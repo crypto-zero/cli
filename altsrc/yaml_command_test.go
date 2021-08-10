@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/micro/cli/v2"
+	"github.com/crypto-zero/cli"
 )
 
 func TestCommandYamlFileTest(t *testing.T) {
