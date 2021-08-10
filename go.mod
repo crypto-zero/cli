@@ -1,4 +1,4 @@
-module github.com/crypto-zero/cli
+module github.com/crypto-zero/cli/v2
 
 go 1.11
 
