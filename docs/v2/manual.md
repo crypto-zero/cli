@@ -293,7 +293,7 @@ func main() {
 }
 ```
 
-See full list of flags at http://godoc.org/github.com/micro/cli
+See full list of flags at http://godoc.org/github.com/crypto-zero/cli
 
 #### Placeholder Values
 
@@ -660,7 +660,7 @@ import (
   "os"
   "strings"
 
-  "github.com/micro/cli"
+  "github.com/crypto-zero/cli"
 )
 
 func main() {
